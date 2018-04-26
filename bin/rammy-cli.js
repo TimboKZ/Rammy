@@ -124,4 +124,15 @@ cli
     });
 
 
+//--------- Cleaning secondary TeX files
+cli
+    .command('clean', 'Delete secondary TeX files in the current directory')
+    .argument('[file]', 'Single .tex file to target')
+    .action((args) => {
+        Promise.resolve()
+            .then(() => rammy.clean({directory: process.cwd(), filePath: args.file}))
+            .catch(handleError);
+    });
+
+
 cli.parse(process.argv);

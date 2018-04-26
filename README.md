@@ -47,3 +47,7 @@ List currently available modules, templates and inputs.
 
 ### `rammy create <file> <template>`
 Create a TeX file using the specified template.
+
+
+### `rammy clean [file]`
+Delete generated TeX files (`.aux`, `.log`, etc).
