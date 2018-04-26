@@ -1,5 +1,10 @@
 # Rammy
 
+
+[![npm](https://img.shields.io/npm/v/rammy.svg)](https://www.npmjs.com/package/rammy)
+[![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
+
+
 Command line assistant for LaTeX projects.
 
 Features (implemented: [x], in development: [d]️, planned: [p]):
