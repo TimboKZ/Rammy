@@ -22,5 +22,3 @@ This will install Rammy globally and expose the `rammy` command in the terminal.
 ## `rammy init`
 
 Interactively initialises a Rammy LaTeX project in the current directory. Creates `.rammyrc.json` config.
-
-I
