@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "rammy": "./bin/rammy-cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TimboKZ/Rammy.git"
@@ -26,5 +29,15 @@
   "bugs": {
     "url": "https://github.com/TimboKZ/Rammy/issues"
   },
-  "homepage": "https://github.com/TimboKZ/Rammy#readme"
+  "homepage": "https://github.com/TimboKZ/Rammy#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "caporal": "^0.10.0",
+    "fs-extra": "^5.0.0",
+    "joi": "^13.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.2",
+    "@types/joi": "^13.0.8"
+  }
 }
