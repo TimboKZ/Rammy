@@ -4,8 +4,8 @@ Command line assistant for LaTeX projects.
 
 Features (implemented: [x], in development: [d]️, planned: [p]):
 * [d] LaTeX project initialization (`.gitignore`, Git submodule with common snippets)
-* [d] Modules with templates
-* [d] Template-based `.tex` file generation
+* [x] Modules with templates
+* [x] Template-based `.tex` file generation
 * [d] Directory cleaning (removing logs, `.aux` files, etc.)
 
 # Installation
@@ -21,14 +21,24 @@ This will install Rammy globally and expose the `rammy` command in the terminal.
 # Commands
 
 ### `rammy init [target-directory]`
-
 Interactively initialises a Rammy LaTeX project in the current directory. Creates `.rammyrc.json` config.
 
 
-### `rammy add <path-to-module>`
+### `rammy init-module <name> [target-directory]`
+Interactively initialises a Rammy module in the current directory. Creates `.rammyrc.json` config.
 
+
+### `rammy add <path-to-module>`
 Adds a module using the path to its folder. Folder name automatically becomes the module name.
 
 
 ###  `rammy remove <module-name>`
+Removes modules by its name.
 
+
+### `rammy list`
+List currently available modules, templates and inputs.
+
+
+### `rammy create <file> <template>`
+Create a TeX file using the specified template.

@@ -6,9 +6,12 @@
  * @license GPL-3.0
  */
 
-const winston = require('winston');
+const colors = require('colors/safe');
 const Promise = require('bluebird');
+const winston = require('winston');
+const _ = require('underscore');
 const cli = require('caporal');
+const path = require('path');
 
 const packageData = require('../package.json');
 const Rammy = require('../lib/Rammy');
@@ -18,7 +21,7 @@ const logger = winston.createLogger({
     format: winston.format.combine(
         winston.format.splat(),
         winston.format.colorize(),
-        winston.format.simple()
+        winston.format.simple(),
     ),
     transports: [new winston.transports.Console()],
 });
@@ -39,18 +42,32 @@ const handleError = (error) => {
 
 cli.logger(logger);
 cli.version(packageData.version);
+
+//--------- Init
 cli
     .command('init', 'Initialise a Rammy LaTeX project')
     .argument('[dir]', 'Target directory', null, process.cwd())
-    .action((args, options) => {
+    .action((args) => {
         Promise.resolve()
             .then(() => rammy.initProject({directory: args.dir}))
             .catch(handleError);
     });
 cli
+    .command('init-module', 'Initialise a Rammy module')
+    .argument('<name>', 'Name of the module')
+    .argument('[dir]', 'Target directory', null, process.cwd())
+    .action((args) => {
+        Promise.resolve()
+            .then(() => rammy.initModule({directory: args.dir, name: args.name}))
+            .catch(handleError);
+    });
+
+
+//--------- Adding/removing modules
+cli
     .command('add', 'Add a Rammy module')
     .argument('<path>', 'Path to module')
-    .action((args, options) => {
+    .action((args) => {
         Promise.resolve()
             .then(() => rammy.addModule({module: args.path}))
             .catch(handleError);
@@ -58,10 +75,53 @@ cli
 cli
     .command('remove', 'Remove previously defined module')
     .argument('<module>', 'Name of the module')
-    .action((args, options, logger) => {
+    .action((args) => {
         Promise.resolve()
             .then(() => rammy.removeModule({module: args.module}))
             .catch(handleError);
     });
+
+
+//--------- Listing modules
+cli
+    .command('list', 'List modules, templates and inputs')
+    .option('-m, --modules-only', 'Display modules only', cli.BOOL, false)
+    .action((args, options) => {
+        Promise.resolve()
+            .then(() => rammy.getAllModuleData())
+            .then(modulesDetails => {
+                const modules = modulesDetails.modules;
+                let detailsString = 'All available modules:\n';
+                const mapDescObject = (templateData, templateName) => {
+                    detailsString += `    - ${colors.cyan(colors.bold(templateName))} ${templateData.description}\n`;
+                };
+                let i = 1;
+                _.mapObject(modules, (moduleData, moduleName) => {
+                    detailsString += `\n${colors.gray(i++)} ${colors.bold(moduleName)}\n`;
+                    if (options.modulesOnly) return;
+                    detailsString += `   ${colors.gray('Templates')}:\n`;
+                    if (_.isEmpty(moduleData.templates)) detailsString += `    - ${colors.gray('Nothing to show.')}\n`;
+                    else _.mapObject(moduleData.templates, mapDescObject);
+                    detailsString += `   ${colors.gray('Inputs')}:\n`;
+                    if (_.isEmpty(moduleData.inputs)) detailsString += `    - ${colors.gray('Nothing to show.')}\n`;
+                    else _.mapObject(moduleData.inputs, mapDescObject);
+                });
+                logger.info(detailsString);
+            })
+            .catch(handleError);
+    });
+
+
+//--------- Manipulating files
+cli
+    .command('create', 'Create a TeX file from template')
+    .argument('<file>', 'Name of the file to create')
+    .argument('<template>', 'Template to use')
+    .action((args) => {
+        Promise.resolve()
+            .then(() => rammy.createFile({filePath: path.resolve(process.cwd(), args.file), template: args.template}))
+            .catch(handleError);
+    });
+
 
 cli.parse(process.argv);
