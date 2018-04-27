@@ -1,6 +1,6 @@
 {
   "name": "rammy",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Command line assistant for LaTeX projects.",
   "main": "index.js",
   "scripts": {

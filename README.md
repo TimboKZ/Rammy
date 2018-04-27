@@ -1,6 +1,5 @@
 # Rammy
 
-
 [![npm](https://img.shields.io/npm/v/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)](https://discord.gg/B7QVaDb)
@@ -14,6 +13,8 @@ Features:
 * **TeX file generation** using templates from modules
 * **TeX compilation** supporting several TeX engines
 * **Directory cleaning** by removing auxiliary files
+
+> Rammy is still in active development - any feedback is welcome! If you encounter a bug, please [create an issue](https://github.com/TimboKZ/Rammy/issues) so it can be fixed.
 
 # Quick example
 
@@ -167,4 +168,4 @@ Cleans the current working directory or the specified TeX file. If a TeX file is
 
 # Contributing
 
-Rammy is still in experimental phase so contributing at this stage is not recommended. You can [create an issue](https://github.com/TimboKZ/Rammy/issues/new) to start a discussion.
+Rammy is still in experimental phase so contributing at this stage is not recommended. You can [create an issue](https://github.com/TimboKZ/Rammy/issues) to start a discussion.
