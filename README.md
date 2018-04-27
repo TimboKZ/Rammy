@@ -1,4 +1,4 @@
-# Rammy
+# ![Rammy](./assets/rammy-banner.png)
 
 [![npm](https://img.shields.io/npm/v/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
