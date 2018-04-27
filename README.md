@@ -3,6 +3,7 @@
 
 [![npm](https://img.shields.io/npm/v/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
+[![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)](https://discord.gg/B7QVaDb)
 
 
 Command line assistant for LaTeX projects.
@@ -10,9 +11,9 @@ Command line assistant for LaTeX projects.
 Features:
 * **LaTeX project setup** with Git support
 * **Rammy modules** with templates and useful LaTeX snippets
-* **`.tex` file generation** using templates from modules
-* **`.tex` compilation** supporting several TeX engines
-* **Directory cleaning** by removing logs, `.aux` files, etc.
+* **TeX file generation** using templates from modules
+* **TeX compilation** supporting several TeX engines
+* **Directory cleaning** by removing auxiliary files
 
 # Quick example
 
@@ -26,9 +27,9 @@ cd my-project
 
 # Initialise a Rammy project
 rammy init --git
-# `--git` flag creates a Git repo and adds a TeX `.gitignore`
+# `--git` flag initialises a Git repo for TeX
 
-# Add a Rammy module, we'll use `https://github.com/TimboKZ/latex-common`
+# Add a Rammy module, we'll use https://github.com/TimboKZ/latex-common
 rammy add TimboKZ/latex-common
 
 # List available modules, templates, inputs
@@ -71,6 +72,7 @@ Creates a Rammy project in the target directory. If no directory is specified, c
 
 > `--git` functionality is still in development and is currently unavailable.
 
+
 ------------
 
 
@@ -81,6 +83,7 @@ rammy init-module <name> [directory]
 ```
 
 Creates a module `.rammyrc.json` in the specified directory. If no directory is specified, current directory is used. The name should be command-line friendly, e.g. `latex-common`.
+
 
 ------------
 
