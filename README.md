@@ -58,7 +58,7 @@ This will install Rammy globally and expose the `rammy` command in the terminal.
 
 # Commands
 
-You can `rammy` or `rammy help <command>` in terminal for brief overview of commands. This section has detailed descriptions of each command.
+You can run `rammy` or `rammy help <command>` in terminal for brief overview of commands. This section has detailed descriptions of each command.
 
 ------------
 
