@@ -38,12 +38,15 @@
     "extend": "^3.0.1",
     "fs-extra": "^5.0.0",
     "joi": "^13.2.0",
+    "shelljs": "^0.8.1",
+    "simple-git": "^1.92.0",
     "underscore": "^1.9.0",
     "winston": "^3.0.0-rc5"
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.2",
     "@types/joi": "^13.0.8",
+    "@types/shelljs": "^0.7.8",
     "@types/underscore": "^1.8.8"
   }
 }

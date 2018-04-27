@@ -66,10 +66,11 @@ cli
 //--------- Adding/removing modules
 cli
     .command('add', 'Add a Rammy module')
-    .argument('<path>', 'Path to module')
-    .action((args) => {
+    .argument('<module>', 'GitHub repo or ath to module')
+    .option('-p, --path', 'Required if the provided argument is a path', cli.BOOL, false)
+    .action((args, options) => {
         Promise.resolve()
-            .then(() => rammy.addModule({module: args.path}))
+            .then(() => rammy.addModule({module: args.module, isPath: options.path}))
             .catch(handleError);
     });
 cli
@@ -106,6 +107,7 @@ cli
                     if (_.isEmpty(moduleData.inputs)) detailsString += `    - ${colors.gray('Nothing to show.')}\n`;
                     else _.mapObject(moduleData.inputs, mapDescObject);
                 });
+                if (i === 1) detailsString += colors.gray('\nNothing to show.\n');
                 logger.info(detailsString);
             })
             .catch(handleError);
@@ -120,6 +122,20 @@ cli
     .action((args) => {
         Promise.resolve()
             .then(() => rammy.createFile({filePath: path.resolve(process.cwd(), args.file), template: args.template}))
+            .catch(handleError);
+    });
+
+
+//--------- Compile a file
+cli
+    .command('compile', 'Compile a TeX file into a PDF')
+    .argument('<file>', 'Name of the TeX file to compile')
+    .option('-c, --clean', 'Clean the directory after compilation', cli.BOOL, false)
+    .action((args, options) => {
+        const pathToFile = path.resolve(process.cwd(), args.file);
+        Promise.resolve()
+            .then(() => rammy.compile({filePath: pathToFile}))
+            .then(() =>  options.clean ? rammy.clean({filePath: pathToFile}) : null)
             .catch(handleError);
     });
 
