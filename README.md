@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)](https://discord.gg/B7QVaDb)
 
-Command line assistant for LaTeX projects.
+📝🛠️ Command line assistant for LaTeX projects.
 
 Features:
 * **LaTeX project setup** with Git support
