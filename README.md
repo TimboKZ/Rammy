@@ -32,7 +32,7 @@ rammy init --git
 # Add a Rammy module, we'll use https://github.com/TimboKZ/latex-common
 rammy add TimboKZ/latex-common
 
-# List available modules, templates, inputs
+# List available modules, templates, snippets
 rammy list
 
 # Create a TeX file from `lecture-notes` template
@@ -84,7 +84,7 @@ rammy init-module <name> [directory]
 
 Creates a module `.rammyrc.json` in the specified directory. If no directory is specified, current directory is used. The name should be command-line friendly, e.g. `latex-common`.
 
-You only need to create a new Rammy module if you want to define some new templates or inputs.
+You only need to create a new Rammy module if you want to define some new templates or snippets.
 
 
 ------------
@@ -116,7 +116,8 @@ If you don't want to or can't use Git, you can just place the module folder anyw
 rammy list [--modules-only]
 ```
 
-Lists modules, templates and inputs discovered through the config. `--modules-only`/`-m` flag can be supplied to only display module names.
+Lists modules, templates and snippets discovered through the config. `--modules-only`/`-m` flag can be supplied to only
+display module names.
 
 
 ------------

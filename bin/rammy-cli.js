@@ -86,7 +86,7 @@ cli
 
 //--------- Listing modules
 cli
-    .command('list', 'List modules, templates and inputs')
+    .command('list', 'List modules, templates and snippets')
     .option('-m, --modules-only', 'Display modules only', cli.BOOL, false)
     .action((args, options) => {
         Promise.resolve()
@@ -104,9 +104,9 @@ cli
                     detailsString += `   ${colors.gray('Templates')}:\n`;
                     if (_.isEmpty(moduleData.templates)) detailsString += `    - ${colors.gray('Nothing to show.')}\n`;
                     else _.mapObject(moduleData.templates, mapDescObject);
-                    detailsString += `   ${colors.gray('Inputs')}:\n`;
-                    if (_.isEmpty(moduleData.inputs)) detailsString += `    - ${colors.gray('Nothing to show.')}\n`;
-                    else _.mapObject(moduleData.inputs, mapDescObject);
+                    detailsString += `   ${colors.gray('Snippets')}:\n`;
+                    if (_.isEmpty(moduleData.snippets)) detailsString += `    - ${colors.gray('Nothing to show.')}\n`;
+                    else _.mapObject(moduleData.snippets, mapDescObject);
                 });
                 if (i === 1) detailsString += colors.gray('\nNothing to show.\n');
                 logger.info(detailsString);
