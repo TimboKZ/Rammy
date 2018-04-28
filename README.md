@@ -4,7 +4,6 @@
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)](https://discord.gg/B7QVaDb)
 
-
 Command line assistant for LaTeX projects.
 
 Features:
@@ -84,6 +83,8 @@ rammy init-module <name> [directory]
 ```
 
 Creates a module `.rammyrc.json` in the specified directory. If no directory is specified, current directory is used. The name should be command-line friendly, e.g. `latex-common`.
+
+You only need to create a new Rammy module if you want to define some new templates or inputs.
 
 
 ------------
@@ -169,3 +170,10 @@ Cleans the current working directory or the specified TeX file. If a TeX file is
 # Contributing
 
 Rammy is still in experimental phase so contributing at this stage is not recommended. You can [create an issue](https://github.com/TimboKZ/Rammy/issues) to start a discussion.
+
+
+# Notes about Rammy
+
+I wrote Rammy during my time at [Caltech](http://www.caltech.edu/), so I can't help but include this:
+
+![CalTeX](./assets/caltex.png)
