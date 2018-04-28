@@ -40,6 +40,7 @@
     "shelljs": "^0.8.1",
     "simple-git": "^1.92.0",
     "underscore": "^1.9.0",
+    "upath": "^1.0.5",
     "winston": "^3.0.0-rc5"
   },
   "devDependencies": {
