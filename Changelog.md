@@ -5,6 +5,20 @@ Documentation:
 * **[Modules.md](./Modules.md)**: Information about Rammy modules, example templates and snippets.
 * **Changelog.md** (this file): Overview of changes in each version, including breaking changes.
 
+-------------------------------------------------------------------------
+
+
+# v0.0.8:
+
+Fixes:
+
+* When initialising a Git repo using `rammy init --git`, Rammy now uses Windows-style line endings on Windows when
+creating/extending the `.gitignore` file.
+
+
+-------------------------------------------------------------------------
+
+
 # v0.0.7
 
 **Breaking changes:**
@@ -23,13 +37,15 @@ intrusive syntax, e.g.:
     ```latex
     \input{../my/snippet.tex} % path: module-relative
     ```
-    
+
 New features:
 
 * More warnings on incorrect use/configuration.
 * `rammy create <file> <template>` now accepts a path to a `.tex` file as the `<template>`.
 * The `--git` flag in `rammy init --git` now works as intended.
 
+
+-------------------------------------------------------------------------
 
 
 # v0.0.6
