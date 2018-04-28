@@ -40,9 +40,12 @@ Any module needs a `.rammyrc.json` to work correctly. You can initialise a Rammy
 }
 ```
 
-In the example above, there is one template - lectures-notes, and two snippets - symbols, header. Each of them has a
-path and a description; the path should be relative to module's .rammyrc.json. You can define as many snippets and 
-templates as you want.
+In the example above, there are two templates - `lectures-notes`, `minimal`, and two snippets - `symbols`, `header`.
+Each of them has a path and a description; the path should be relative to module's .rammyrc.json. You can define as many
+snippets and templates as you want.
+
+**Important:** Module, template and snippet names must be alphanumeric. Not following this rule can and *will* break
+Rammy.
 
 For illustration purposes, consider the example module directory below.
 
@@ -135,7 +138,9 @@ machine.
 # Snippets
 
 Snippets are standalone TeX files that are either too small or too specific to be templates. These could contain 
-definition of new shorthand commands or package configurations. They are meant to be added to an existing TeX file 
+definitions of new shorthand commands or package configurations. They are meant to be added to an existing TeX file
 using the `\input{...}` command.
 
-> More information on snippets will be added at a later date.
+Note that snippets should **always** be valid TeX files - they are added to other TeX files by path, Rammy does no extra
+pre-processing. If some snippet in your module isn't a valid TeX file your users won't be able to compile their
+documents.

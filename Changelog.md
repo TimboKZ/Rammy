@@ -28,6 +28,9 @@ New features:
 
 * More warnings on incorrect use/configuration.
 * `rammy create <file> <template>` now accepts a path to a `.tex` file as the `<template>`.
+* The `--git` flag in `rammy init --git` now works as intended.
+
+
 
 # v0.0.6
 

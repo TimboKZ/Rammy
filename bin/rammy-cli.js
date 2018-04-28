@@ -118,12 +118,21 @@ cli
 
 //--------- Manipulating files
 cli
-    .command('create', 'Create a TeX file from template')
+    .command('create', 'Create a .tex file from template')
     .argument('<file>', 'Name of the file to create')
-    .argument('<template>', 'Template to use')
+    .argument('<template>', 'Template name or path')
     .action((args) => {
         Promise.resolve()
             .then(() => rammy.createFile({filePath: path.resolve(process.cwd(), args.file), template: args.template}))
+            .catch(handleError);
+    });
+cli
+    .command('extend', 'Add a snippet to a .tex file')
+    .argument('<file>', 'Target .tex file')
+    .argument('<snippet>', 'Snippet name or path')
+    .action((args) => {
+        Promise.resolve()
+            .then(() => rammy.addSnippetToFile({filePath: path.resolve(process.cwd(), args.file), snippet: args.snippet}))
             .catch(handleError);
     });
 

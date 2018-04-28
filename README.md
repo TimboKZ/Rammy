@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)](https://discord.gg/B7QVaDb)
 
-📝🛠️ Command line assistant for LaTeX projects.
+📝🛠️ Command line assistant and template manager for LaTeX projects.
 
 Features:
 * **LaTeX project setup** with Git support
@@ -62,7 +62,9 @@ This will install Rammy globally and expose the `rammy` command in the terminal.
 
 # Commands
 
-You can run `rammy` or `rammy help <command>` in terminal for brief overview of commands. This section has detailed descriptions of each command.
+You can execute `rammy` or `rammy help <command>` in terminal for to view a brief overview of commands. This section has
+a detailed description of each command.
+
 
 ------------
 
@@ -73,9 +75,12 @@ You can run `rammy` or `rammy help <command>` in terminal for brief overview of 
 rammy init [directory] [--git]
 ```
 
-Creates a Rammy project in the target directory. If no directory is specified, current directory is used. By default, only creates a `.rammyrc.json` file. When `--git` flag is supplied, Rammy executes `git init` (if necessary) and appends [the contents of `TeX.gitignore`](./assets/TeX.gitignore) to `.gitignore`. `.gitignore` is created if it doesn't already exist. Using the `--git` flag requires [Git](https://git-scm.com/) to be installed (for the `git` command).
+Creates a Rammy project in the target directory. If no directory is specified, current directory is used. By default,
+only creates a `.rammyrc.json` file.
 
-> `--git` functionality is still in development and is currently unavailable.
+When `--git` flag is supplied, Rammy executes `git init` (if necessary) and appends [the contents of
+TeX.gitignore`](./assets/TeX.gitignore) to `.gitignore`. `.gitignore` is created if it doesn't already exist. Using the
+--git` flag requires [Git](https://git-scm.com/) to be installed (for the `git` command).
 
 
 ------------
@@ -87,7 +92,8 @@ Creates a Rammy project in the target directory. If no directory is specified, c
 rammy init-module <name> [directory]
 ```
 
-Creates a module `.rammyrc.json` in the specified directory. If no directory is specified, current directory is used. The name should be command-line friendly, e.g. `latex-common`.
+Creates a module `.rammyrc.json` in the specified directory. If no directory is specified, current directory is used.
+The name should be command-line friendly, e.g. `latex-common`.
 
 You only need to create a new Rammy module if you want to define some new templates or snippets.
 
@@ -107,7 +113,10 @@ Adds a Rammy module to the current project. `<module>` can be one of the followi
 2. Valid Git URL, e.g. `git@github.com:TimboKZ/Rammy.git`. This doesn't have to be hosted on GitHub.
 3. Local path, e.g. `./path/to/module`. When using a local path, you must supply the `--path` flag.
 
-When using (1) or (2), Git logic might differ. If your Rammy project is inside a Git repository, the Rammy module folder will be added as a Git submodule. If Rammy project is not inside a Git repository, the Rammy module will be simply cloned. The project is always cloned into the directory where `.rammyrc.json` is located.
+When using (1) or (2), Git logic might differ. If your Rammy project is inside a Git repository, the Rammy module folder
+will be added as a Git submodule. If Rammy project is not inside a Git repository, the Rammy module will be simply
+cloned. The project is always cloned into the directory where `.rammyrc.json` is located. See [Modules.md](./Modules.md)
+for more details on how modules work.
 
 If you don't want to or can't use Git, you can just place the module folder anywhere on your hard disk and use (3).
 
@@ -154,13 +163,29 @@ Creates a TeX file using the specified template. The template can either be a fu
 ------------
 
 
+### Add a snippet to existing TeX file
+
+```bash
+rammy extend <file> <snippet>
+```
+
+Adds a TeX snippet to an existing `.tex` file. Specified snippet name can either be a snippet name or a path to another
+`.tex` file. Snippets are added through `\input{...}` commands - see [Modules.md](./Modules.md) for more details on how
+snippets work.
+
+
+------------
+
+
 ### Compile a TeX file into a PDF
 
 ```bash
 rammy compile <file> [--clean]
 ```
 
-Compiles a TeX file using either `pdflatex` or `latexmk`, depending on what is available. If no supported commands are found, the command will fail. `--clean`/`-c` flag can be supplied to delete auxiliary files afterwards. This is equivalent to running `rammy compile <file>` followed by `rammy clean <file>`.
+Compiles a TeX file using either `pdflatex` or `latexmk`, depending on what is available. If no supported commands are
+found, the command will fail. `--clean`/`-c` flag can be supplied to delete auxiliary files afterwards. This is
+equivalent to running `rammy compile <file>` followed by `rammy clean <file>`.
 
 
 ------------
@@ -172,7 +197,12 @@ Compiles a TeX file using either `pdflatex` or `latexmk`, depending on what is a
 rammy clean [file]
 ```
 
-Cleans the current working directory or the specified TeX file. If a TeX file is specified, e.g. `rammy clean ./folder/doc.tex`, Rammy will scan the folder containing the TeX file and delete *relevant* `.aux`, `.fdb_latexmk`, `.fls`, `.log`, `.out` and others. *Relevant* means files that share the same basename, e.g. `doc.aux`.
+Cleans the current working directory or the specified TeX file. If a TeX file is specified, e.g.
+`rammy clean ./folder/doc.tex`, Rammy will scan the folder containing the TeX file and delete *relevant* `.aux`,
+`.fdb_latexmk`, `.fls`, `.log`, `.out` and others. *Relevant* means files that share the same basename, e.g. `doc.aux`.
+
+
+------------
 
 
 # Contributing
