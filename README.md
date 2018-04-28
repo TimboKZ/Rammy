@@ -13,6 +13,11 @@ Features:
 * **TeX compilation** supporting several TeX engines
 * **Directory cleaning** by removing auxiliary files
 
+Documentation:
+* **README** (this file): General usage, command reference.
+* **[Modules.md](./Modules.md)**: Information about Rammy modules, example templates and snippets.
+* **[Changelog.md](./Changelog.md)**: Overview of changes in each version, including breaking changes.
+
 > Rammy is still in active development - any feedback is welcome! If you encounter a bug, please [create an issue](https://github.com/TimboKZ/Rammy/issues) so it can be fixed.
 
 # Quick example
