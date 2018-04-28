@@ -35,9 +35,10 @@ const rammy = new Rammy(config);
 const handleError = (error) => {
     if (error instanceof Util.RammyError) {
         logger.error(error.message);
-        if (error.comment) logger.error(error.comment);
+        if (error.comment) logger.warn(error.comment);
     }
     else console.error(error);
+    process.exit(1);
 };
 
 cli.logger(logger);

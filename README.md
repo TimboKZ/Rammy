@@ -140,7 +140,9 @@ Removes a module by its name. You can find out what modules are installed using 
 rammy create <file> <template>
 ```
 
-Creates a TeX file using the specified template.
+Creates a TeX file using the specified template. The template can either be a full template name (e.g.
+`latex-common/lecture-notes`), short template name (e.g. `lecture-notes`) or a path to a tex file (e.g. `
+./path/to/template.tex`).
 
 
 ------------
