@@ -214,7 +214,8 @@ Rammy is still in experimental phase so contributing at this stage is not recomm
 
 Some planned features:
 * `rammy fix <file>` command: If you move a generated `.tex` file around, relative paths might break. Rammy can fix most (if not all) of these paths thanks to metadata in comments. This command will do exactly that.
-* Add redundancy checks to `rammy extend ...`: if a snippet is already a part of the file, Rammy will not import it again.
+* Add redundancy checks to `rammy extend`: if a snippet is already a part of the file, Rammy will not import it again.
+* Support more engines for `rammy compile`, make `rammy clean` more intelligent.
 
 I wrote Rammy during my time at [Caltech](http://www.caltech.edu/), so I can't help but include this:
 
