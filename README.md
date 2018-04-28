@@ -14,7 +14,7 @@ Features:
 * **Directory cleaning** by removing auxiliary files
 
 Documentation:
-* **README** (this file): General usage, command reference.
+* **README.md** (this file): General usage, command reference.
 * **[Modules.md](./Modules.md)**: Information about Rammy modules, example templates and snippets.
 * **[Changelog.md](./Changelog.md)**: Overview of changes in each version, including breaking changes.
 

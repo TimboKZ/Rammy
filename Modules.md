@@ -2,6 +2,11 @@
 
 Rammy modules are meant to hold reusable LaTeX snippets and `.tex` file templates.
 
+Documentation:
+* **[README.md](./README.md)**: General usage, command reference.
+* **Modules.md** (this file): Information about Rammy modules, example templates and snippets.
+* **[Changelog.md](./Changelog.md)**: Overview of changes in each version, including breaking changes.
+
 # Module config
 
 Any module needs a `.rammyrc.json` to work correctly. You can initialise a Rammy module in a folder using 
@@ -66,7 +71,7 @@ Consider the example config above. The `.tex` file for the `lectures-notes` temp
 \usepackage{hyperref}
 \newcommand\HeaderTitle{\textbf{CS 666 Lecture Notes} by Timur Kuzhagaliyev}
 
-%-- Rammy start ---------------
+%-- Rammy start ----------------
 \input{../symbols.tex} % snippet: symbols
 \input{../header.tex} % snippet: header
 %-- Rammy end ------------------
@@ -92,7 +97,7 @@ of comments you can add to your `\input`s:
 Use a comment of form `% snippet: <name>` to reference a snippet. When this line will be rendered in a template, Rammy
 will completely ignore the path in `\input{...}` - it will just use the snippet path from `.rammyrc.json`.
 ```latex
-% This will compile directly as TeX and in a Rammy template:
+% This will compile directly as a TeX file and in a Rammy template:
 \input{../symbols.tex} % snippet: symbols
 
 % This is not a valid TeX file but will compile as a Rammy template:
