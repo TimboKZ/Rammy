@@ -31,8 +31,8 @@ mkdir my-project
 cd my-project
 
 # Initialise a Rammy project
-rammy init --git
-# `--git` flag initialises a Git repo for TeX
+rammy init
+# Add `--git` flag to create a Git repo at the same time
 
 # Add a Rammy module, we'll use https://github.com/TimboKZ/latex-common
 rammy add TimboKZ/latex-common

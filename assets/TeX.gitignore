@@ -1,5 +1,5 @@
-### TeX.gitignore appended by Rammy. From:
-### https://github.com/github/gitignore/blob/master/TeX.gitignore
+#-- TeX ignore appended by Rammy | github.com/TimboKZ/Rammy
+#-- Based on: https://github.com/github/gitignore/blob/master/TeX.gitignore
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

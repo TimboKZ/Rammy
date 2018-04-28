@@ -48,9 +48,10 @@ cli.version(packageData.version);
 cli
     .command('init', 'Initialise a Rammy LaTeX project')
     .argument('[dir]', 'Target directory', null, process.cwd())
-    .action((args) => {
+    .option('-g, --git', 'Initialise a Git repo with .gitignore', cli.BOOL, false)
+    .action((args, options) => {
         Promise.resolve()
-            .then(() => rammy.initProject({directory: args.dir}))
+            .then(() => rammy.initProject({directory: path.resolve(args.dir), initGit: options.git}))
             .catch(handleError);
     });
 cli
