@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha './lib/**/*.test.js' './bin/**/*.test.js' --check-leaks",
-    "test-windows": "mocha '.\\lib\\**\\*.test.js' '.\\bin\\**\\*.test.js' --check-leaks"
+    "test-windows": "mocha \"./lib/**/*.test.js\" \"./bin/**/*.test.js\" --check-leaks"
   },
   "bin": {
     "rammy": "./bin/rammy-cli.js"
