@@ -5,7 +5,6 @@
  */
 
 const {describe, it} = require('mocha');
-const assert = require('chai').assert;
 const shell = require('shelljs');
 const fs = require('fs-extra');
 const path = require('path');
@@ -67,7 +66,6 @@ class TestUtil {
         } else {
             if (expectedResult) {
                 failure = result.code !== 0;
-                console.log('Wanted to fail, got: ', failure);
                 expectedCode = 0;
             }
             else {

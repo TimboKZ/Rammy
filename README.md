@@ -21,7 +21,6 @@ Documentation:
 * **[Changelog.md](./Changelog.md)**: Overview of changes in each version, including breaking changes.
 
 > Rammy is still in active development - any feedback is welcome! If you encounter a bug, please [create an issue](https://github.com/TimboKZ/Rammy/issues) so it can be fixed.
->
 > Development branch status:
 > [![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=dev)](https://travis-ci.org/TimboKZ/Rammy)
 > [![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/dev?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/dev)
@@ -85,8 +84,8 @@ Creates a Rammy project in the target directory. If no directory is specified, c
 only creates a `.rammyrc.json` file.
 
 When `--git` flag is supplied, Rammy executes `git init` (if necessary) and appends [the contents of
-TeX.gitignore`](./assets/TeX.gitignore) to `.gitignore`. `.gitignore` is created if it doesn't already exist. Using the
---git` flag requires [Git](https://git-scm.com/) to be installed (for the `git` command).
+`TeX.gitignore`](./assets/TeX.gitignore) to `.gitignore`. `.gitignore` is created if it doesn't already exist. Using
+this flag requires [Git](https://git-scm.com/) to be installed (for the `git` command).
 
 
 ------------
