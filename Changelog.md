@@ -14,6 +14,7 @@ Fixes:
 
 * When initialising a Git repo using `rammy init --git`, Rammy now uses Windows-style line endings on Windows when
 creating/extending the `.gitignore` file.
+* Replaced `path` package with `upath` for more consistent line endings (especially on Windows).
 
 
 -------------------------------------------------------------------------
