@@ -2,7 +2,9 @@
 
 [![npm](https://img.shields.io/npm/v/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
-[![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)](https://discord.gg/B7QVaDb)
+[![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=master)](https://travis-ci.org/TimboKZ/Rammy)
+[![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/master?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/master)
+[![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)]()
 
 📝🛠️ Command line assistant and template manager for LaTeX projects.
 
@@ -216,6 +218,8 @@ Some planned features:
 * `rammy fix <file>` command: If you move a generated `.tex` file around, relative paths might break. Rammy can fix most (if not all) of these paths thanks to metadata in comments. This command will do exactly that.
 * Add redundancy checks to `rammy extend`: if a snippet is already a part of the file, Rammy will not import it again.
 * Support more engines for `rammy compile`, make `rammy clean` more intelligent.
+
+If you want to chat about this project you can join Rammy's [Discord server](https://discord.gg/B7QVaDb).
 
 I wrote Rammy during my time at [Caltech](http://www.caltech.edu/), so I can't help but include this:
 
