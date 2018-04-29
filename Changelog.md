@@ -8,6 +8,16 @@ Documentation:
 -------------------------------------------------------------------------
 
 
+# v0.1.0:
+
+Fixes:
+* Fixed the bug where `rammy compile` would hang on invalid LaTeX file when using `pdflatex`. Now `pdflatex` is being
+called with the `-halt-on-error` flag.
+
+
+-------------------------------------------------------------------------
+
+
 # v0.0.10:
 
 Fixes:
