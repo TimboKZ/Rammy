@@ -44,7 +44,7 @@ describe('Rammy CLI', () => {
 
         // Delete fixtures path if it exists, create an empty folder
         .then(() => TU.resetFixtures())
-        .then(() => shell.cd(TU.getFixturesPath())),
+        .then(() => shell.cd(TU.getFixturesPath()))
     );
 
     describe('with no arguments', () => {
