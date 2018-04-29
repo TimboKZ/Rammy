@@ -4,8 +4,9 @@
   "description": "Command line assistant for LaTeX projects.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './lib/**/*.test.js' './bin/**/*.test.js' --check-leaks",
-    "test-windows": "mocha \"./lib/**/*.test.js\" \"./bin/**/*.test.js\" --check-leaks"
+    "test": "mocha './lib/**/*.test.js' './bin/**/*.test.js'",
+    "test-windows": "mocha \"./lib/**/*.test.js\" \"./bin/**/*.test.js\"",
+    "test-coverage": "nyc mocha './lib/**/*.test.js' './bin/**/*.test.js'"
   },
   "bin": {
     "rammy": "./bin/rammy-cli.js"
@@ -52,6 +53,7 @@
     "@types/underscore": "^1.8.8",
     "@types/winston": "^2.3.9",
     "chai": "^4.1.2",
-    "mocha": "^5.1.1"
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1"
   }
 }

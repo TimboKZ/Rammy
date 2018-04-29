@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=master)](https://travis-ci.org/TimboKZ/Rammy)
 [![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/master?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/master)
-[![Discord](https://discordapp.com/api/guilds/439239249397678080/widget.png)]()
+![David](https://img.shields.io/david/TimboKZ/Rammy.svg)
 
 📝🛠️ Command line assistant and template manager for LaTeX projects.
 

@@ -1,0 +1,2 @@
+--check-leaks
+--timeout 5000

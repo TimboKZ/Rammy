@@ -14,6 +14,9 @@ const execRammyCommand = (command = '') => {
     return shell.exec(`node ${rammyCliScript} ${command}`, {silent: true});
 };
 
+// Tests in this file check that each CLI command terminates with the right exit code. Tests that focus on business
+// logic should go into other classes.
+
 describe('Rammy CLI', () => {
 
     before(() => {
