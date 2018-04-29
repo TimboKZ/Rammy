@@ -217,6 +217,10 @@ pull request.
 
 # Notes about Rammy
 
+`dev` branch status:
+[![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=dev)](https://travis-ci.org/TimboKZ/Rammy)
+[![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/dev?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/dev)
+
 Some planned features:
 * `rammy fix <file>` command: If you move a generated `.tex` file around, relative paths might break. Rammy can fix most (if not all) of these paths thanks to metadata in comments. This command will do exactly that.
 * Add redundancy checks to `rammy extend`: if a snippet is already a part of the file, Rammy will not import it again.
