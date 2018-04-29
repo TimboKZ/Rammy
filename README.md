@@ -211,6 +211,9 @@ Cleans the current working directory or the specified TeX file. If a TeX file is
 
 Rammy is still in experimental phase so contributing at this stage is not recommended. You can [create an issue](https://github.com/TimboKZ/Rammy/issues) to start a discussion.
 
+If you end up adding something, make sure `npm test` and `npm run lint` terminate without any errors before creating a
+pull request.
+
 
 # Notes about Rammy
 

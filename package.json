@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha './lib/**/*.test.js' './bin/**/*.test.js'",
     "test-windows": "mocha \"./lib/**/*.test.js\" \"./bin/**/*.test.js\"",
-    "test-coverage": "nyc mocha './lib/**/*.test.js' './bin/**/*.test.js'"
+    "test-coverage": "nyc mocha './lib/**/*.test.js' './bin/**/*.test.js'",
+    "lint": "eslint ./test/ ./lib/"
   },
   "bin": {
     "rammy": "./bin/rammy-cli.js"
@@ -53,6 +54,7 @@
     "@types/underscore": "^1.8.8",
     "@types/winston": "^2.3.9",
     "chai": "^4.1.2",
+    "eslint": "^4.19.1",
     "mocha": "^5.1.1",
     "nyc": "^11.7.1"
   }
