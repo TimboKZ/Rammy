@@ -12,6 +12,7 @@ Documentation:
 
 Fixes:
 * Fixed the bug where modules added through the full Git URL will have `.git` in their folder names.
+* Fixed the bug where `fs.readFile()` would return different types on Windows and *nix machines.
 
 New features:
 * You can now use `rammy add ...` command on modules.
