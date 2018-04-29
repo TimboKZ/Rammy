@@ -21,6 +21,10 @@ Documentation:
 * **[Changelog.md](./Changelog.md)**: Overview of changes in each version, including breaking changes.
 
 > Rammy is still in active development - any feedback is welcome! If you encounter a bug, please [create an issue](https://github.com/TimboKZ/Rammy/issues) so it can be fixed.
+>
+> Development branch status:
+> [![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=dev)](https://travis-ci.org/TimboKZ/Rammy)
+> [![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/dev?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/dev)
 
 # Quick example
 
@@ -132,8 +136,8 @@ If you don't want to or can't use Git, you can just place the module folder anyw
 rammy list [--modules-only]
 ```
 
-Lists modules, templates and snippets discovered through the config. `--modules-only`/`-m` flag can be supplied to only
-display module names.
+Lists modules, templates and snippets discovered through the config. `--modules-only` or `-m` flag can be supplied to
+only display module names.
 
 
 ------------
@@ -145,7 +149,8 @@ display module names.
 rammy remove <module-name>
 ```
 
-Removes a module by its name. You can find out what modules are installed using `rammy list`.
+Removes a module by its name. You can find out what modules are installed using `rammy list`. Doesn't actually remove
+the module folder, just erases it from the config.
 
 
 ------------
@@ -185,9 +190,11 @@ snippets work.
 rammy compile <file> [--clean]
 ```
 
-Compiles a TeX file using either `pdflatex` or `latexmk`, depending on what is available. If no supported commands are
-found, the command will fail. `--clean`/`-c` flag can be supplied to delete auxiliary files afterwards. This is
-equivalent to running `rammy compile <file>` followed by `rammy clean <file>`.
+Compiles a TeX file using either `pdflatex` or `latexmk`, depending on what is available. If none of these are
+available, the command will fail.
+
+`--clean` or `-c` flag can be supplied to delete auxiliary files afterwards. This is equivalent to running `rammy
+compile <file>` followed by `rammy clean <file>`.
 
 
 ------------
@@ -216,10 +223,6 @@ pull request.
 
 
 # Notes about Rammy
-
-`dev` branch status:
-[![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=dev)](https://travis-ci.org/TimboKZ/Rammy)
-[![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/dev?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/dev)
 
 Some planned features:
 * `rammy fix <file>` command: If you move a generated `.tex` file around, relative paths might break. Rammy can fix most (if not all) of these paths thanks to metadata in comments. This command will do exactly that.
