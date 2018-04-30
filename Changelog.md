@@ -14,6 +14,10 @@ Fixes:
 * Fixed the bug where `rammy compile` would hang on invalid LaTeX file when using `pdflatex`. Now `pdflatex` is being
 called with the `-halt-on-error` flag.
 
+New features:
+* `rammy clean`, when used on a directory, now deletes all auxiliary files and not only those that have a corresponding
+`.tex` file.
+
 
 -------------------------------------------------------------------------
 
