@@ -238,8 +238,8 @@ inside of your snippet file, use `\providecommand` to define a default value. Re
 
 Your snippets can be added to existing `.tex` files using `rammy extend <file> <snippet>`. If the specified file already
 has a Rammy section, then the snippet will be added to the end of the Rammy section using the `\input` command. If the
-file is corrupted and Rammy can find `%-- Rammy begin` but not `%-- Rammy end`, then the snippet will be added right
-after `%-- Rammy end`. If the specified file does not already have a Rammy section, it will be created.
+file is corrupted and Rammy can find `%-- Rammy start` but not `%-- Rammy end`, then the snippet will be added right
+after `%-- Rammy start`. If the specified file does not already have a Rammy section, it will be created.
 
 Consider the directory structure we've shown in the end of the [Modules](#modules) section. Here's an example of a Rammy
 snippet that could correspond to `lecture-notes.tex`:
