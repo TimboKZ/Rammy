@@ -7,6 +7,7 @@ Documentation:
 * **Modules.md** (this file): Information about Rammy modules, example templates and snippets.
 * **[Changelog.md](./Changelog.md)**: Overview of changes in each version, including breaking changes.
 
+> If you want a quick example, take a look at [my `latex-common` module](https://github.com/TimboKZ/latex-common).
 
 # Philosophy
 
