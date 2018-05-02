@@ -16,11 +16,11 @@ you don't have to write any boilerplate code yourself. Ideally, Rammy modules sh
 repositories so that other people can make use of your code (and for your own convenience). See [Modules](#modules)
 section for more info.
 
-*Templates* are self-contained TeX documents that will be used to generate new files when `rammy create <file>
+**Templates** are self-contained TeX documents that will be used to generate new files when `rammy create <file>
 <template>` command is called. Ideally, templates should be directly compilable without using Rammy. See
 [Templates](#templates) section for more info.
 
-*Snippets* are collections of useful TeX commands. Unlike templates, snippet files don't have to be self-contained TeX
+**Snippets** are collections of useful TeX commands. Unlike templates, snippet files don't have to be self-contained TeX
 documents - that is, they don't need an `\documentclass{...}` or `\begin{document}`. The idea behind snippets is that
 they should be easily addable to an *existing* TeX file. See [Snippets](#snippets) section for more info.
 
@@ -47,7 +47,7 @@ The most important file in your module is the config, `.rammyrc.json`, which you
 reference these templates and snippets using either their full name, `ModuleName/template-name`, or the shorthand,
 `template-name`.
 
-*Note that* module, template and snippet names *must* be alphanumeric - using non-alphanumeric can result in undefined
+**Note that** module, template and snippet names *must* be alphanumeric - using non-alphanumeric can result in undefined
 behaviour from Rammy. Moreover, when choosing a name for your module, make sure it matches the name of your
 folder/repository - this is not a strict requirement, but will make things much less confusing for your users.
 
