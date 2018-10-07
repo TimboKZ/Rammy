@@ -228,8 +228,6 @@ Some planned features:
 * Add redundancy checks to `rammy extend`: if a snippet is already a part of the file, Rammy will not import it again.
 * Support more engines for `rammy compile`, make `rammy clean` more intelligent.
 
-If you want to chat about this project you can join Rammy's [Discord server](https://discord.gg/B7QVaDb).
-
 I wrote Rammy during my time at [Caltech](http://www.caltech.edu/), so I can't help but include this:
 
 ![CalTeX](./assets/caltex.png)
