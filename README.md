@@ -2,8 +2,6 @@
 
 [![npm](https://img.shields.io/npm/v/rammy.svg)](https://www.npmjs.com/package/rammy)
 [![npm](https://img.shields.io/npm/dt/rammy.svg)](https://www.npmjs.com/package/rammy)
-[![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=master)](https://travis-ci.org/TimboKZ/Rammy)
-[![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/master?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/master)
 ![David](https://img.shields.io/david/TimboKZ/Rammy.svg)
 
 📝🛠️ Command line assistant and template manager for LaTeX projects.
@@ -21,9 +19,11 @@ Documentation:
 * **[Changelog.md](./Changelog.md)**: Overview of changes in each version, including breaking changes.
 
 > Rammy is still in active development - any feedback is welcome! If you encounter a bug, please [create an issue](https://github.com/TimboKZ/Rammy/issues) so it can be fixed.
-> Development branch status:
-> [![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=dev)](https://travis-ci.org/TimboKZ/Rammy)
-> [![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/dev?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/dev)
+
+| Branch \ OS | Linux & OS X                                                                                                  | Windows                                                                                                                                                             |
+|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Master      | [![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=master)](https://travis-ci.org/TimboKZ/Rammy) | [![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/master?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/master) |
+| Development | [![Build Status](https://travis-ci.org/TimboKZ/Rammy.svg?branch=dev)](https://travis-ci.org/TimboKZ/Rammy)    | [![Build status](https://ci.appveyor.com/api/projects/status/5x1l205m023tfe5n/branch/dev?svg=true)](https://ci.appveyor.com/project/TimboKZ/rammy/branch/dev)       |
 
 # Quick example
 
